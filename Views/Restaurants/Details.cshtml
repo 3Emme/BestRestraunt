@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+@using BestRestaurants.Models;
+<h1>Restaurant #@Model.RestaurantId : @Model.RestaurantName</h1>
+<ul>
+  <li>@Model.RestaurantLocation</li>
+  <li>@Model.RestaurantPhone</li>
+  <li>@Model.RestaurantMenu</li>
+  <li>@Model.Cuisine.CuisineName</li>
+</ul>
+<p>@Html.ActionLink("Edit Restaurant","Edit",new {id = Model.RestaurantId})</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete",new {id = Model.RestaurantId})</p>
+<p>@Html.ActionLink("Go Home","Index","Home")</p>

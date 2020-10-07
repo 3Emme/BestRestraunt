@@ -2,12 +2,12 @@ namespace BestRestaurants.Models
 {
     public class Restaurant
     {
-        public int RestaurantId;
-        public string RestaurantName;
-        public string RestaurantLocation;
-        public string RestaurantPhone;
-        public string RestaurantMenu;
-        public string CuisineType;
+        public int RestaurantId {get;set;}
+        public string RestaurantName {get;set;}
+        public string RestaurantLocation {get;set;}
+        public string RestaurantPhone {get;set;}
+        public string RestaurantMenu {get;set;}
+        public int CuisineId {get;set;}
         public virtual Cuisine Cuisine {get;set;}
 
         public Restaurant()

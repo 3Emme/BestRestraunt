@@ -1,20 +1,15 @@
 @{
   Layout = "_Layout";
 }
-
 @using BestRestaurants.Models;
-
 <h1>Current Restaurant Options:</h1>
-
 @if (@Model.Count == 0)
 {
   <h3>No restaurants have been added yet!</h3>
 }
-
 @foreach (Restaurant restaurant in Model)
 {
-  <li>@restaurant.RestaurantId . @restaurant.RestaurantName</li>
+  <li><a href="/restaurants/details/@restaurant.RestaurantId">@restaurant.RestaurantName</a> | @restaurant.Cuisine.CuisineName</li>
 }
-
-<p>@html.ActionLink("Add a Restaurant","Create")</p>
-<p>@html.ActionLink("Go Home","Index","Home")</p>
+<p>@Html.ActionLink("Add a Restaurant","Create")</p>
+<p>@Html.ActionLink("Go Home","Index","Home")</p>

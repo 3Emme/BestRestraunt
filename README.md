@@ -24,18 +24,18 @@ Allow a user to search for all of a cuisine's restaurants.
 
 ### Specs
 
-Cuisine: CuisineName
-Restauraunts: RestaurantName, RestaurantLocation, RestaurantPhone, RestaurantMenu, CuisineType
+Cuisine: CuisineName [Complete]
+Restauraunts: RestaurantName, RestaurantLocation, RestaurantPhone, RestaurantMenu, CuisineType [Complete]
 
 Views/Stages:
-Welcome Page
-  View All restaraunts
-    Add a restaraunt
-    Restaraunt Details (upon user selection)
+Welcome Page [Complete]
+  View all restaraunts [Complete]
+    Add a restaraunt [Complete]
+    Restaraunt Details (upon user selection) [Complete]
       Remove restaraunt
       Update restaraunt
-  View all cuisines
-    Add a cuisine
+  View all cuisines [Complete]
+    Add a cuisine [Complete]
     Cuisine Details (upon user selection)
       Remove cuisine
       Update cuisine

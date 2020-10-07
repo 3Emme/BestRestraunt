@@ -22,7 +22,6 @@ namespace BestRestaurants.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "CuisineName");
             return View();
         }
         [HttpPost]
@@ -34,7 +33,11 @@ namespace BestRestaurants.Controllers
         }
         public ActionResult Details(int id)
         {
-            Cuisine model =  _db.Cuisines.FirstOrDefault(x => x.CuisineId == id);
+            Cuisine cuisine =  _db.Cuisines.FirstOrDefault(x => x.CuisineId == id);
+            List<Restaurant> restaurants = _db.Restaurants.Where(x => x.CuisineId == id).ToList();
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("cuisine", cuisine);
+            model.Add("restaurants", restaurants);
             return View(model);
         }
         public ActionResult Edit(int id)

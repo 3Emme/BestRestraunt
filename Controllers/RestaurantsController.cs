@@ -63,5 +63,11 @@ namespace BestRestaurants.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Search(string restaurantName)
+        {
+        List<Restaurant> model = _db.Restaurants.Where(x => x.RestaurantName.Contains(restaurantName)).ToList();
+        return View("Index", model);
+        }
     }
 }

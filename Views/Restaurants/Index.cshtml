@@ -5,7 +5,7 @@
 <h1>Current Restaurant Options:</h1>
 @if (@Model.Count == 0)
 {
-  <h3>No restaurants have been added yet!</h3>
+  <h3>No restaurants found!</h3>
 }
 @foreach (Restaurant restaurant in Model)
 {
@@ -13,3 +13,9 @@
 }
 <p>@Html.ActionLink("Add a Restaurant","Create")</p>
 <p>@Html.ActionLink("Go Home","Index","Home")</p>
+@using (Html.BeginForm("Search","Restaurants"))
+  {
+    @Html.Label("Search by restaurant name:")
+    @Html.TextBox("restaurantName")
+    <input type="submit" value="Search!" />
+  }

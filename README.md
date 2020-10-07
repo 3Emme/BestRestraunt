@@ -32,14 +32,14 @@ Welcome Page [Complete]
   View all restaraunts [Complete]
     Add a restaraunt [Complete]
     Restaraunt Details (upon user selection) [Complete]
-      Remove restaraunt
-      Update restaraunt
+      Remove restaraunt [Complete]
+      Update restaraunt [Complete]
   View all cuisines [Complete]
     Add a cuisine [Complete]
-    Cuisine Details (upon user selection)
-      Remove cuisine
-      Update cuisine
-  Restaraunt Search
+    Cuisine Details (upon user selection) [Complete]
+      Remove cuisine [Complete]
+      Update cuisine [Complete]
+  Restaraunt Search [Complete]
 
 
 ## Setup/Installation Requirements

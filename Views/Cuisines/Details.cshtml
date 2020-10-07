@@ -2,8 +2,16 @@
   Layout = "_Layout";
 }
 @using BestRestaurants.Models;
-<h1>Cuisine #@Model.CuisineId : @Model.CuisineName</h1>
+<h1>Cuisine #@Model["cuisine"].CuisineId : @Model["cuisine"].CuisineName</h1>
+@if (Model["restaurants"].Count == 0)
+{
+  <h3>No restaurants found!</h3>
+}
+@foreach (Restaurant restaurant in Model["restaurants"])
+{
+  <li><a href="/restaurants/details/@restaurant.RestaurantId">@restaurant.RestaurantName</a> | @restaurant.Cuisine.CuisineName</li>
+}
 
-<p>@Html.ActionLink("Edit Cuisine","Edit",new {id = Model.CuisineId})</p>
-<p>@Html.ActionLink("Delete Cuisine", "Delete",new {id = Model.CuisineId})</p>
+<p>@Html.ActionLink("Edit Cuisine","Edit",new {id = Model["cuisine"].CuisineId})</p>
+<p>@Html.ActionLink("Delete Cuisine", "Delete",new {id = Model["cuisine"].CuisineId})</p>
 <p>@Html.ActionLink("Go Home","Index","Home")</p>

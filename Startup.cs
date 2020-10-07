@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BestRestraunts.Models;
 
-namespace BestRestraunts
+namespace BestRestaurants
 {
   public class Startup
   {

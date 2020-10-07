@@ -6,17 +6,41 @@
 
 ## Description
 
-A program for users to catalog and organize  music.
+This project was written during week 9 of Epicodus.
+
+### Objectives
+
+Create a website where users can add their favorite restaurants based on the type of cuisine they offer.
+
+Add a Cuisine class. Build out all CRUD functionality (Create, Read, Update, Delete) for this class. Remember that "Read" means to view a particular cuisine and to list out all of the cuisines.
+
+Add a Restaurant class. Build out all CRUD functionality for this class.
+
+Add properties other than name to your Restaurant class so that you can display descriptive information about the restaurants.
+
+Make the connection between a cuisine and a restaurant in the database. A cuisine can have many restaurants, but a restaurant can only be attached to one cuisine.
+
+Allow a user to search for all of a cuisine's restaurants.
 
 ### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
-|  1. Record Class, Instantiate a Record class | ... | Record Class |
-|  2. Add Function, Test and Build | Test | Function |
-|  3. Delete Function, Test and Build | Test | Function |
-|  4. HTML Home/Index, Create Landing page | ... | Homepage |
-|  5. HTML Places/Index, Create class pages | ... | Class pages |
-|  6. ... | ... | ... |
+
+Cuisine: CuisineName
+Restauraunts: RestaurantName, RestaurantLocation, RestaurantPhone, RestaurantMenu, CuisineType
+
+Views/Stages:
+Welcome Page
+  View All restaraunts
+    Add a restaraunt
+    Restaraunt Details (upon user selection)
+      Remove restaraunt
+      Update restaraunt
+  View all cuisines
+    Add a cuisine
+    Cuisine Details (upon user selection)
+      Remove cuisine
+      Update cuisine
+  Restaraunt Search
+
 
 ## Setup/Installation Requirements
 
@@ -26,7 +50,6 @@ A program for users to catalog and organize  music.
   * Run GitBASH in directory
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
-  * Have fun with Places Been! <!-- TITLE HERE -->
 
 * Cloning options
   * For cloning please use the following GitHub [tutorial](https://docs.github.com/en/enterprise/2.16/user/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -34,7 +57,6 @@ A program for users to catalog and organize  music.
   * Run GitBASH in directory
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
-  * Have fun with Places Been! <!-- TITLE HERE -->
 
 ## Known Bugs
 
@@ -44,9 +66,6 @@ No Known Bugs
 
 Main Programs
 * C# / ASP.NET
-
-### Other Links
-[GitHub](https://github.com/mmanchee)
 
 ### License
 

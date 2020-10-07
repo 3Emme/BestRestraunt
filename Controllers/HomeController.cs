@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace BestRestraunts.Controllers
+namespace BestRestaurants.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
     [HttpGet("/")]
     public ActionResult Index()

@@ -13,7 +13,7 @@
 
 @foreach (Cuisine cuisine in Model)
 {
-  <li>@cuisine.CuisineId . @cuisine.CuisineName</li>
+  <li>@cuisine.CuisineId . <a href="/cuisines/details/@cuisine.CuisineId"> @cuisine.CuisineName</a></li>
 }
 
 <p>@Html.ActionLink("Add a Cuisine","Create")</p>

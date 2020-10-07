@@ -59,5 +59,9 @@ namespace BestRestaurants.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
     }
 }

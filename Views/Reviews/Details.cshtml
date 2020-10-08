@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+@using BestRestaurants.Models;
+<h1>Restaurant #@Model.Restaurant.RestaurantId : @Model.Restaurant.RestaurantName</h1>
+<ul>
+  <li>@Model.Restaurant.RestaurantLocation</li>
+  <li>@Model.Restaurant.RestaurantPhone</li>
+  <li>@Model.Restaurant.RestaurantMenu</li>
+  <li>@Model.Restaurant.Cuisine.CuisineName</li>
+</ul>
+
+<p>@Model.ReviewUser</p>
+<p>@Model.ReviewHeader</p>
+<p>@Model.ReviewBody</p>
+<p>@Model.ReviewDate</p>
+
+<p>@Html.ActionLink("Edit Review","Edit", "Reviews", new {id = Model.ReviewId})</p>
+<p>@Html.ActionLink("Delete Review","Delete", "Reviews", new {id = Model.ReviewId})</p>
+<p>@Html.ActionLink("Go Back to Restaurant","Details","Restaurants",new {id = Model.RestaurantId})</p>

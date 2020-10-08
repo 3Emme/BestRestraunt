@@ -35,7 +35,11 @@ namespace BestRestaurants.Controllers
         }
         public ActionResult Details(int id)
         {
-            Restaurant model =  _db.Restaurants.FirstOrDefault(x => x.RestaurantId == id);
+            Restaurant restaurant =  _db.Restaurants.FirstOrDefault(x => x.RestaurantId == id);
+            List<Review> reviews = _db.Reviews.Where(x => x.RestaurantId == id).ToList();
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("restaurant", restaurant);
+            model.Add("reviews", reviews);
             return View(model);
         }
         public ActionResult Delete(int id)

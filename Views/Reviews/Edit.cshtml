@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BestRestaurants.Models.Review
+
+<h4>Edit @Html.DisplayFor(model => model.ReviewUser)!</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.RestaurantId)
+    @Html.HiddenFor(model => model.ReviewId)
+    @Html.LabelFor(model => model.ReviewUser)
+    @Html.EditorFor(model => model.ReviewUser)
+    @Html.LabelFor(model => model.ReviewDate)
+    @Html.EditorFor(model => model.ReviewDate)
+    @Html.LabelFor(model => model.ReviewHeader)
+    @Html.EditorFor(model => model.ReviewHeader)
+    @Html.LabelFor(model => model.ReviewBody)
+    @Html.EditorFor(model => model.ReviewBody)
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Show all Restaurants", "Index")</p>

@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BestRestaurants.Models.Review
+
+<h4>Add a Review!</h4>
+@using (Html.BeginForm())
+{ 
+    @* @Html.HiddenFor(model => model.RestaurantId = ViewBag.RestaurantId) *@
+    @Html.Hidden("RestaurantId", (int)ViewBag.RestaurantId)
+    @Html.LabelFor(model => model.ReviewUser)
+    @Html.TextBoxFor(model => model.ReviewUser)
+    @Html.LabelFor(model => model.ReviewDate)
+    @Html.TextBoxFor(model => model.ReviewDate)
+    @Html.LabelFor(model => model.ReviewHeader)
+    @Html.TextBoxFor(model => model.ReviewHeader)
+    @Html.LabelFor(model => model.ReviewBody)
+    @Html.TextBoxFor(model => model.ReviewBody)
+    
+    <input type="submit" value="Add new Restaurant" />
+}
+<p>@Html.ActionLink("Show all Restaurantss", "Index")</p>

@@ -2,13 +2,24 @@
   Layout = "_Layout";
 }
 @using BestRestaurants.Models;
-<h1>Restaurant #@Model.RestaurantId : @Model.RestaurantName</h1>
+<h1>Restaurant #@Model["restaurant"].RestaurantId : @Model["restaurant"].RestaurantName</h1>
 <ul>
-  <li>@Model.RestaurantLocation</li>
-  <li>@Model.RestaurantPhone</li>
-  <li>@Model.RestaurantMenu</li>
-  <li>@Model.Cuisine.CuisineName</li>
+  <li>@Model["restaurant"].RestaurantLocation</li>
+  <li>@Model["restaurant"].RestaurantPhone</li>
+  <li>@Model["restaurant"].RestaurantMenu</li>
+  <li>@Model["restaurant"].Cuisine.CuisineName</li>
 </ul>
-<p>@Html.ActionLink("Edit Restaurant","Edit",new {id = Model.RestaurantId})</p>
-<p>@Html.ActionLink("Delete Restaurant", "Delete",new {id = Model.RestaurantId})</p>
-<p>@Html.ActionLink("Go Home","Index","Home")</p>
+<h3>Reviews:</h3>
+@if (Model["reviews"].Count == 0)
+{
+  <h3>No reviews found!</h3>
+}
+@foreach (Review review in Model["reviews"])
+{
+  <li><a href="/reviews/details/@review.ReviewId">@review.ReviewUser</a> | @review.Restaurant.RestaurantName</li>
+}
+
+<p>@Html.ActionLink("Add a Review","Create", "Reviews", new {id = Model["restaurant"].RestaurantId})</p>
+<p>@Html.ActionLink("Edit Restaurant","Edit",new {id = Model["restaurant"].RestaurantId})</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete",new {id = Model["restaurant"].RestaurantId})</p>
+<p>@Html.ActionLink("Go Back to Restaurants","Index","Restaurants")</p>
